@@ -3,6 +3,7 @@
 ## Requirements
 
 - Node.js v10.5.0+
+- MongoDB 4.0.9+
 
 ## Setup
 

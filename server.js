@@ -12,6 +12,8 @@ const {
 const express = require('express');
 const cors = require('cors');
 
+const DB = require('./mongodb').DB;
+
 const app = express();
 
 app.use(cors());
@@ -22,6 +24,8 @@ app.get('*', (req, res) => {
   });
 });
 
-app.listen(APP_PORT, APP_HOSTNAME, () => {
+app.listen(APP_PORT, APP_HOSTNAME, async () => {
+  await DB.connect();
+
   console.log(`[expess] listening @ ${APP_HOSTNAME}:${APP_PORT}`);
 });
