@@ -18,9 +18,17 @@ const app = express();
 
 app.use(cors());
 
-app.get('*', (req, res) => {
+app.get('/', (req, res) => {
   res.json({
     version
+  });
+});
+
+app.get('/songs', async (req, res) => {
+  const songs = await DB.collection('songs').find({}).toArray();
+
+  res.json({
+    songs
   });
 });
 
