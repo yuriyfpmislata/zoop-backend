@@ -27,7 +27,7 @@ async function connect() {
   }
 }
 
-async function collection(colectionName) {
+function collection(colectionName) {
   return DB.collection(colectionName);
 }
 
