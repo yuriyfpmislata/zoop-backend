@@ -10,8 +10,11 @@ const {
 } = require('./package.json');
 
 const express = require('express');
+const cors = require('cors');
 
 const app = express();
+
+app.use(cors());
 
 app.get('*', (req, res) => {
   res.json({
@@ -20,5 +23,5 @@ app.get('*', (req, res) => {
 });
 
 app.listen(APP_PORT, APP_HOSTNAME, () => {
-  console.log(`[expess] listening at port 4000`);
+  console.log(`[expess] listening @ ${APP_HOSTNAME}:${APP_PORT}`);
 });
