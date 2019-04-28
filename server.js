@@ -11,6 +11,9 @@ const {
 
 const express = require('express');
 const cors = require('cors');
+const expressGraphQL = require('express-graphql');
+const bodyParser = require('body-parser');
+const { buildSchema } = require('graphql');
 
 const DB = require('./mongodb').DB;
 
@@ -31,6 +34,28 @@ app.get('/songs', async (req, res) => {
     songs
   });
 });
+
+const schema = buildSchema(`
+  type Query {
+    test: String
+  }
+`);
+
+const rootValue = {
+  test() {
+    return `Hello GraphQL`;
+  }
+}
+
+app.use(
+  '/graphql',
+  bodyParser.json(),
+  expressGraphQL({
+    schema,
+    rootValue,
+    graphiql: true
+  })
+);
 
 app.listen(APP_PORT, APP_HOSTNAME, async () => {
   await DB.connect();
