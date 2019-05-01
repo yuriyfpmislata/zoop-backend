@@ -10,13 +10,13 @@ const schema = buildSchema(`
     _id: ID!
     name: String
     artistId: ID!
+    artwork: String
   }
 
   type Song {
     _id: ID!
     name: String
     albumId: ID!
-    artwork: String
     url: String
     genres: [String]
   }

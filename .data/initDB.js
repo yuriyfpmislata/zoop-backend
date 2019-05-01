@@ -60,10 +60,12 @@ async function insertAlbums(albums, artistsDB, songs) {
     albums.map(albumName => {
       const artistName = songs.find(song => song.album === albumName).artist;
       const artistId = artistsDB.find(artist => artist.name === artistName)._id;
+      const artwork = songs.find(song => song.album === albumName).artwork;
 
       return {
         name: albumName,
-        artistId
+        artistId,
+        artwork
       }
     })
   );
@@ -78,7 +80,6 @@ async function insertSongs(songs, albumsDB) {
       return {
         name: song.name,
         albumId,
-        artwork: song.artwork,
         url: song.url,
         genres: song.genres
       }
