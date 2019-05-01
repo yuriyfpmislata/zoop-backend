@@ -12,9 +12,19 @@ const schema = buildSchema(`
     artistId: ID!
   }
 
+  type Song {
+    _id: ID!
+    name: String
+    albumId: ID!
+    artwork: String
+    url: String
+    genres: [String]
+  }
+
   type Query {
     artists: [Artist]
     albums: [Album]
+    songs: [Song]
   }
 `);
 
