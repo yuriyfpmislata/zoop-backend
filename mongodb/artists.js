@@ -6,6 +6,13 @@ async function findAll() {
   return await DB.collection(COLL_NAME).find().toArray();
 }
 
+async function findById(_id) {
+  return await DB.collection(COLL_NAME).findOne({
+    _id
+  });
+}
+
 module.exports = {
-  findAll
+  findAll,
+  findById
 }

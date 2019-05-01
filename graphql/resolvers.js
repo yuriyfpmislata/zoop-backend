@@ -13,6 +13,11 @@ const resolvers = {
     async songs() {
       return await Songs.findAll();
     }
+  },
+  Album: {
+    async artist(album) {
+      return await Artists.findById(album.artistId);
+    }
   }
 }
 
