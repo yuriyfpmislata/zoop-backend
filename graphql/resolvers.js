@@ -1,6 +1,8 @@
+const { findAll } = require('../mongodb/artists');
+
 const resolvers = {
-  test() {
-    return `Hello GraphQL`;
+  async artists() {
+    return await findAll();
   }
 }
 
