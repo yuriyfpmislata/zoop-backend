@@ -3,14 +3,16 @@ const Albums = require('../mongodb/albums');
 const Songs = require('../mongodb/songs');
 
 const resolvers = {
-  async artists() {
-    return await Artists.findAll();
-  },
-  async albums() {
-    return await Albums.findAll();
-  },
-  async songs() {
-    return await Songs.findAll();
+  Query: {
+    async artists() {
+      return await Artists.findAll();
+    },
+    async albums() {
+      return await Albums.findAll();
+    },
+    async songs() {
+      return await Songs.findAll();
+    }
   }
 }
 

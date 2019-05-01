@@ -1,6 +1,8 @@
-const { buildSchema } = require('graphql');
+const { makeExecutableSchema } = require('graphql-tools');
 
-const schema = buildSchema(`
+const resolvers = require('./resolvers').resolvers;
+
+const typeDefs = `
   type Artist {
     _id: ID!
     name: String
@@ -26,6 +28,9 @@ const schema = buildSchema(`
     albums: [Album]
     songs: [Song]
   }
-`);
+`;
 
-module.exports.schema = schema;
+module.exports.schema = makeExecutableSchema({
+  typeDefs,
+  resolvers
+});
