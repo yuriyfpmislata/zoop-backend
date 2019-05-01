@@ -31,7 +31,12 @@ function collection(colectionName) {
   return DB.collection(colectionName);
 }
 
+function getDB() {
+  return DB;
+}
+
 module.exports.DB = {
   connect,
-  collection
+  collection,
+  getDB
 };

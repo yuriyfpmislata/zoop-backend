@@ -1,0 +1,224 @@
+[
+  {
+    "name": "Night Owl",
+    "artist": "Broke For Free",
+    "album": "Directionless",
+    "artwork": "https://freemusicarchive.org/file/images/tracks/Track_-_20110118110252018?method=crop&width=290&height=290",
+    "url": "https://freemusicarchive.org/file/music/WFMU/Broke_For_Free/Directionless_EP/Broke_For_Free_-_01_-_Night_Owl.mp3",
+    "genres": [
+      "Electronic",
+      "Minimal"
+    ]
+  },
+  {
+    "name": "Enthusiast",
+    "artist": "Tours",
+    "album": "Enthusiast",
+    "artwork": "https://freemusicarchive.org/file/images/tracks/Track_-_20120822132359065?method=crop&width=290&height=290",
+    "url": "https://freemusicarchive.org/file/music/no_curator/Tours/Enthusiast/Tours_-_01_-_Enthusiast.mp3",
+    "genres": [
+      "Electronic",
+      "Dubstep"
+    ]
+  },
+  {
+    "name": "Siesta",
+    "artist": "Jahzzar",
+    "album": "Traveller's Guide",
+    "artwork": "https://freemusicarchive.org/file/images/albums/Jahzzar_-_Travellers_Guide_-_20120326162547357.jpg?method=crop&width=290&height=290",
+    "url": "https://freemusicarchive.org/file/music/no_curator/Jahzzar/Travellers_Guide_Excerpt/Jahzzar_-_05_-_Siesta.mp3",
+    "genres": [
+      "Pop",
+      "Indie-Rock"
+    ]
+  },
+  {
+    "name": "Hachiko (The Faithtful Dog)",
+    "artist": "The Kyoto Connection",
+    "album": "Wake Up",
+    "artwork": "https://freemusicarchive.org/file/images/tracks/Track_-_20130527133810200?method=crop&width=290&height=290",
+    "url": "https://freemusicarchive.org/file/music/ccCommunity/The_Kyoto_Connection/Wake_Up/The_Kyoto_Connection_-_09_-_Hachiko_The_Faithtful_Dog.mp3",
+    "genres": [
+      "Pop",
+      "Electronic",
+      "New Age",
+      "Instrumental"
+    ]
+  },
+  {
+    "name": "Fater Lee",
+    "artist": "Black Ant",
+    "album": "Free Beats Sel. 3",
+    "artwork": "https://freemusicarchive.org/file/images/albums/Black_Ant_-_Free_Beats_Sel_3_-_20100125165648429.JPG?method=crop&width=290&height=290",
+    "url": "https://freemusicarchive.org/file/music/Music_for_Video/Black_Ant/Free_Beats_Sel_3/Black_Ant_-_01_-_Fater_Lee.mp3",
+    "genres": [
+      "Hip-Hop"
+    ]
+  },
+  {
+    "name": "RUNNING WATERS",
+    "artist": "Jason Shaw",
+    "album": "Audionautix: Acoustic",
+    "artwork": "https://freemusicarchive.org/file/images/albums/Jason_Shaw_-_Audionautix_Acoustic_-_20110817152444364.jpg?method=crop&width=290&height=290",
+    "url": "https://freemusicarchive.org/file/music/ccCommunity/Jason_Shaw/Audionautix_Acoustic/Jason_Shaw_-_RUNNING_WATERS.mp3",
+    "genres": [
+      "Country",
+      "Folk"
+    ]
+  },
+  {
+    "name": "Springish",
+    "artist": "Gillicuddy",
+    "album": "Plays Guitar",
+    "artwork": "https://freemusicarchive.org/file/images/tracks/Gillicuddy_-_05_-_Springish_-_2017080214748246.jpg?method=crop&width=290&height=290",
+    "url": "https://freemusicarchive.org/file/music/WFMU/Gillicuddy/Plays_Guitar/Gillicuddy_-_05_-_Springish.mp3",
+    "genres": [
+      "Folk"
+    ]
+  },
+  {
+    "name": "Starling",
+    "artist": "Podington Bear",
+    "album": "Solo Instruments",
+    "artwork": "https://freemusicarchive.org/file/images/tracks/Track_-_20130403174754372?method=crop&width=290&height=290",
+    "url": "https://freemusicarchive.org/file/music/Music_for_Video/Podington_Bear/Solo_Instruments/Podington_Bear_-_Starling.mp3",
+    "genres": [
+      "Electronic",
+      "Soundtrack",
+      "Instrumental"
+    ]
+  },
+  {
+    "name": "Moonlight Reprise",
+    "artist": "Kai Engel",
+    "album": "Irsen's Tale",
+    "artwork": "https://freemusicarchive.org/file/images/tracks/Track_-_20130816114657541?method=crop&width=290&height=290",
+    "url": "https://freemusicarchive.org/file/music/ccCommunity/Kai_Engel/Irsens_Tale/Kai_Engel_-_04_-_Moonlight_Reprise.mp3",
+    "genres": [
+      "Classic",
+      "Ambient",
+      "IDM",
+      "Instrumental"
+    ]
+  },
+  {
+    "name": "Something Elated",
+    "artist": "Broke For Free",
+    "album": "Something EP",
+    "artwork": "https://freemusicarchive.org/file/images/tracks/Track_-_20110708114228484?method=crop&width=290&height=290",
+    "url": "https://freemusicarchive.org/file/music/WFMU/Broke_For_Free/Something_EP/Broke_For_Free_-_05_-_Something_Elated.mp3",
+    "genres": [
+      "Electronic",
+      "Hip-Hop Beats"
+    ]
+  },
+  {
+    "name": "The last ones",
+    "artist": "Jahzzar",
+    "album": "Smoke Factory",
+    "artwork": "https://freemusicarchive.org/file/images/albums/Jahzzar_-_Smoke_Factory_-_20120326162411609.jpg?method=crop&width=290&height=290",
+    "url": "https://freemusicarchive.org/file/music/no_curator/Jahzzar/Smoke_Factory_Excerpt/Jahzzar_-_01_-_The_last_ones.mp3",
+    "genres": [
+      "Rock",
+      "Celtic"
+    ]
+  },
+  {
+    "name": "Ghost Dance",
+    "artist": "Kevin MacLeod",
+    "album": "Classical Sampler",
+    "artwork": "https://freemusicarchive.org/file/images/tracks/Track_-_20110715120329863?method=crop&width=290&height=290",
+    "url": "https://freemusicarchive.org/file/music/no_curator/Kevin_MacLeod/Classical_Sampler/Kevin_MacLeod_-_Ghost_Dance.mp3",
+    "genres": [
+      "Classic"
+    ]
+  },
+  {
+    "name": "Favorite Secrets",
+    "artist": "Waylon Thornton",
+    "album": "Mystery Club",
+    "artwork": "https://freemusicarchive.org/file/images/albums/Waylon_Thornton_-_Mystery_Club_-_20110125183425012.jpg?method=crop&width=290&height=290",
+    "url": "https://freemusicarchive.org/file/music/no_curator/Mystery_Club/02_-_Favorite_Secrets.mp3",
+    "genres": [
+      "Pop",
+      "Lo-Fi",
+      "Surf"
+    ]
+  },
+  {
+    "name": "Stance Gives You Balance",
+    "artist": "Hogan Grip",
+    "album": "Stance Gives You Balance",
+    "artwork": "https://freemusicarchive.org/file/images/albums/junior85_-_Hogan_Grip_-_Stance_Gives_You_Balance_-_20100821193724436.jpg?method=crop&width=290&height=290",
+    "url": "https://freemusicarchive.org/file/music/no_curator/Hogan_Grip/Hogan_Grip_-_Stance_Gives_You_Balance/Hogan_Grip_-_03_-_Stance_Gives_You_Balance.mp3",
+    "genres": [
+      "Electronic",
+      "Lo-Fi",
+      "Ambient"
+    ]
+  },
+  {
+    "name": "Requiem for a Fish",
+    "artist": "The Freak Fandango Orchestra",
+    "album": "Tale Of A Dead Fish",
+    "artwork": "https://freemusicarchive.org/file/images/albums/The_Freak_Fandango_Orchestra_-_Tales_Of_A_Dead_Fish_-_2012020325233354.jpg?method=crop&width=290&height=290",
+    "url": "https://freemusicarchive.org/file/music/Music_for_Video/The_Freak_Fandango_Orchestra/Tales_Of_A_Dead_Fish/The_Freak_Fandango_Orchestra_-_01_-_Requiem_for_a_Fish.mp3",
+    "genres": [
+      "Indie-Rock"
+    ]
+  },
+  {
+    "name": "As Colorful As Ever",
+    "artist": "Broke For Free",
+    "album": "Layers",
+    "artwork": "https://freemusicarchive.org/file/images/albums/Broke_For_Free_-_Layers_-_20120418184903300.jpg?method=crop&width=290&height=290",
+    "url": "https://freemusicarchive.org/file/music/Music_for_Video/Broke_For_Free/Layers/Broke_For_Free_-_01_-_As_Colorful_As_Ever.mp3",
+    "genres": [
+      "Electronic",
+      "Hip-Hop",
+      "Chill-out"
+    ]
+  },
+  {
+    "name": "DD Groove",
+    "artist": "Kevin MacLeod",
+    "album": "Blues Sampler",
+    "artwork": "https://freemusicarchive.org/file/images/tracks/Track_-_20110715112105108?method=crop&width=290&height=290",
+    "url": "https://freemusicarchive.org/file/music/WFMU/Kevin_MacLeod/Blues_Sampler/Kevin_MacLeod_-_04_-_DD_Groove.mp3",
+    "genres": [
+      "Blues"
+    ]
+  },
+  {
+    "name": "11 strANGE Ls",
+    "artist": "Mark Neil",
+    "album": "Blue",
+    "artwork": "https://freemusicarchive.org/file/images/artists/Mark_Neil_-_20110924122811889.JPG?method=crop&width=290&height=290",
+    "url": "https://freemusicarchive.org/file/music/Black_Lantern_Music/Mark_Neil/Blue/Mark_Neil_-_11_strANGE_Ls.mp3",
+    "genres": [
+      "Soundtrack"
+    ]
+  },
+  {
+    "name": "Take Me Higher",
+    "artist": "Jahzzar",
+    "album": "Tumbling Dishes Like Old-Man's Wishes",
+    "artwork": "https://freemusicarchive.org/file/images/albums/Jahzzar_-_Tumbling_Dishes_Like_Old-Mans_Wishes_-_20140325170047442.jpg?method=crop&width=290&height=290",
+    "url": "https://freemusicarchive.org/file/music/Music_for_Video/Jahzzar/Tumbling_Dishes_Like_Old-Mans_Wishes/Jahzzar_-_10_-_Take_Me_Higher.mp3",
+    "genres": [
+      "Pop",
+      "Folk",
+      "Instrumental"
+    ]
+  },
+  {
+    "name": "RSPN",
+    "artist": "Blank & Kytt",
+    "album": "Heavy, Crazy, Serious",
+    "artwork": "https://freemusicarchive.org/file/images/tracks/Track_-_20120510123641134?method=crop&width=290&height=290",
+    "url": "https://freemusicarchive.org/file/music/ccCommunity/Blank__Kytt/Heavy_Crazy_Serious/Blank__Kytt_-_08_-_RSPN.mp3",
+    "genres": [
+      "Hip-Hop Beats"
+    ]
+  }
+]
