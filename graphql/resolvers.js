@@ -1,8 +1,12 @@
-const { findAll } = require('../mongodb/artists');
+const Artists = require('../mongodb/artists');
+const Albums = require('../mongodb/albums');
 
 const resolvers = {
   async artists() {
-    return await findAll();
+    return await Artists.findAll();
+  },
+  async albums() {
+    return await Albums.findAll();
   }
 }
 

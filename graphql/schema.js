@@ -6,8 +6,15 @@ const schema = buildSchema(`
     name: String
   }
 
+  type Album {
+    _id: ID!
+    name: String
+    artistId: ID!
+  }
+
   type Query {
     artists: [Artist]
+    albums: [Album]
   }
 `);
 
