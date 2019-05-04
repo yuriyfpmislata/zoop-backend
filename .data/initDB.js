@@ -21,7 +21,7 @@ DB.connect()
 
     // **********
 
-    await insertArtists(artistsDedup);
+    await insertArtists(artistsDedup, rawSongs);
     console.log(`[_db] inserted artists`);
 
     const artistsDB = await DB.collection('artists').find().toArray();
@@ -49,9 +49,12 @@ DB.connect()
 
 // **********
 
-async function insertArtists(artists) {
+async function insertArtists(artists, songs) {
   return await DB.collection('artists').insertMany(
-    artists.map(name => ({ name }))
+    artists.map(name => {
+      const image = songs.find(song => song.artist === name).artist_image;
+      return { name, image }
+    })
   );
 }
 
