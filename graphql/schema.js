@@ -6,6 +6,7 @@ const typeDefs = `
   type Artist {
     _id: ID!
     name: String
+    image: String
   }
 
   type Album {
