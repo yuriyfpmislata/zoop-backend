@@ -75,6 +75,8 @@ async function insertAlbums(albums, artistsDB, songs) {
 }
 
 async function insertSongs(songs, albumsDB) {
+  const MIN_PLAY_COUNT = 20;
+  const MAX_PLAY_COUNT = 300;
   return await DB.collection('songs').insertMany(
     songs.map(song => {
       const albumName = song.album;
@@ -84,8 +86,14 @@ async function insertSongs(songs, albumsDB) {
         name: song.name,
         albumId,
         url: song.url,
-        genres: song.genres
+        genres: song.genres,
+        playCount: _randomBetween(MIN_PLAY_COUNT, MAX_PLAY_COUNT)
       }
     })
   );
+}
+
+// https://stackoverflow.com/a/7228322/3499595
+function _randomBetween(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
 }

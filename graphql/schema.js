@@ -23,6 +23,7 @@ const typeDefs = `
     albumId: ID!
     url: String
     genres: [String]
+    playCount: Int
   }
 
   type Query {
