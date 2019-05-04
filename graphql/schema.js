@@ -26,7 +26,7 @@ const typeDefs = `
   }
 
   type Query {
-    artists: [Artist]
+    artists(random: Boolean, limit: Int): [Artist]
     albums: [Album]
     songs: [Song]
   }

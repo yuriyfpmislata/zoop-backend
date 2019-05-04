@@ -12,7 +12,17 @@ async function findById(_id) {
   });
 }
 
+async function findRandom(limit = 5) {
+  // https://stackoverflow.com/questions/2824157/random-record-from-mongodb
+  return await DB.collection(COLL_NAME).aggregate([
+    {
+      $sample: { size: limit }
+    }
+  ]).toArray();
+}
+
 module.exports = {
   findAll,
-  findById
+  findById,
+  findRandom
 }

@@ -4,7 +4,11 @@ const Songs = require('../mongodb/songs');
 
 const resolvers = {
   Query: {
-    async artists() {
+    async artists(_, args) {
+      if (args && args.random) {
+        return await Artists.findRandom(args.limit);
+      }
+
       return await Artists.findAll();
     },
     async albums() {
