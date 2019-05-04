@@ -14,7 +14,11 @@ const resolvers = {
     async albums() {
       return await Albums.findAll();
     },
-    async songs() {
+    async songs(_, args) {
+      if (args && args.topPlayed) {
+        return await Songs.findTopPlayed(args.limit);
+      }
+
       return await Songs.findAll();
     }
   },
