@@ -15,6 +15,7 @@ const typeDefs = `
     artist: Artist
     artistId: ID!
     artwork: String
+    songs: [Song]
   }
 
   type Song {
