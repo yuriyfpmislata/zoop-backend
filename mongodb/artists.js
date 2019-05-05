@@ -1,9 +1,42 @@
 const DB = require('.').DB;
+const Songs = require('./songs');
 
 const COLL_NAME = 'artists';
 
 async function findAll() {
-  return await DB.collection(COLL_NAME).find().toArray();
+  const mainResult = await DB.collection(COLL_NAME).aggregate([
+    {
+      $lookup: {
+        from: "albums",
+        localField: "_id",
+        foreignField: "artistId",
+        as: "albums"
+      }
+    },
+    {
+      $lookup: {
+        from: "songs",
+        localField: "albums._id",
+        foreignField: "albumId",
+        as: "songs"
+      }
+    },
+  ]).toArray();
+
+  const withAlbumSongs = mainResult.map(async artist => {
+    return {
+      ...artist,
+      albums: artist.albums.map(async album => {
+        const songs = await Songs.findByAlbumId(album._id);
+        return {
+          ...album,
+          songs
+        }
+      })
+    }
+  });
+
+  return withAlbumSongs;
 }
 
 async function findById(_id) {

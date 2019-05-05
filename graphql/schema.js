@@ -7,6 +7,8 @@ const typeDefs = `
     _id: ID!
     name: String
     image: String
+    albums: [Album]
+    songs: [Song]
   }
 
   type Album {

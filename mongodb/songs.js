@@ -71,8 +71,15 @@ async function findTopPlayed(limit = 0) {
     .toArray();
 }
 
+async function findByAlbumId(albumId) {
+  return await DB.collection(COLL_NAME).find({
+    albumId: ObjectId(albumId)
+  }).toArray();
+}
+
 module.exports = {
   findAll,
   findTopPlayed,
-  findById
+  findById,
+  findByAlbumId
 }
