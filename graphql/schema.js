@@ -33,6 +33,7 @@ const typeDefs = `
     artists(random: Boolean, limit: Int): [Artist]
     albums: [Album]
     songs(topPlayed: Boolean, limit: Int): [Song]
+    song(id: ID!): Song
   }
 `;
 

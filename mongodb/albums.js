@@ -11,6 +11,17 @@ async function findAll() {
         foreignField: "albumId",
         as: "songs"
       }
+    },
+    {
+      $lookup: {
+        from: "artists",
+        localField: "artistId",
+        foreignField: "_id",
+        as: "artist"
+      }
+    },
+    {
+      $unwind: "$artist"
     }
   ]).toArray();
 }

@@ -20,6 +20,9 @@ const resolvers = {
       }
 
       return await Songs.findAll();
+    },
+    async song(_, args) {
+      return await Songs.findById(args.id);
     }
   },
   Album: {
