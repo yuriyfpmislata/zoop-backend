@@ -34,8 +34,9 @@ const typeDefs = `
   type Query {
     artists(random: Boolean, limit: Int): [Artist]
     albums: [Album]
-    songs(topPlayed: Boolean, limit: Int): [Song]
+    songs: [Song]
     song(id: ID!): Song
+    topPlayedSongs(limit: Int): [Song]
   }
 `;
 

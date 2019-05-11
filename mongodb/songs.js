@@ -65,7 +65,30 @@ async function findById(_id) {
 }
 
 async function findTopPlayed(limit = 0) {
-  return await DB.collection(COLL_NAME).find()
+  return await DB.collection(COLL_NAME).aggregate([
+    {
+      $lookup: {
+        from: "albums",
+        localField: "albumId",
+        foreignField: "_id",
+        as: "album"
+      }
+    },
+    {
+      $unwind: "$album"
+    },
+    {
+      $lookup: {
+        from: "artists",
+        localField: "album.artistId",
+        foreignField: "_id",
+        as: "artist"
+      }
+    },
+    {
+      $unwind: "$artist"
+    }
+  ])
     .sort({ playCount: -1 })
     .limit(limit)
     .toArray();
