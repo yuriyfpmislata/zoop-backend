@@ -31,8 +31,6 @@ async function findAll() {
 }
 
 async function findById(_id) {
-  console.log(_id);
-
   return (await DB.collection(COLL_NAME).aggregate([
     {
       $match: {

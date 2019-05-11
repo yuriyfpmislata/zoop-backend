@@ -22,6 +22,9 @@ const resolvers = {
     },
     async topPlayedSongs(_, args) {
       return await Songs.findTopPlayed(args.limit);
+    },
+    async artist(_, args) {
+      return await Artists.findById(args.id);
     }
   },
   Album: {

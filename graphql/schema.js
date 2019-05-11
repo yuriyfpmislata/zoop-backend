@@ -37,6 +37,7 @@ const typeDefs = `
     songs: [Song]
     song(id: ID!): Song
     topPlayedSongs(limit: Int): [Song]
+    artist(id: ID!): Artist
   }
 `;
 

@@ -1,5 +1,6 @@
 const DB = require('.').DB;
 const Songs = require('./songs');
+const { ObjectId } = require('mongodb');
 
 const COLL_NAME = 'artists';
 
@@ -40,9 +41,32 @@ async function findAll() {
 }
 
 async function findById(_id) {
-  return await DB.collection(COLL_NAME).findOne({
-    _id
-  });
+  // return await DB.collection(COLL_NAME).findOne({
+  //   _id: ObjectId(_id)
+  // });
+  return (await DB.collection(COLL_NAME).aggregate([
+    {
+      $match: {
+        _id: ObjectId(_id)
+      }
+    },
+    {
+      $lookup: {
+        from: "albums",
+        localField: "_id",
+        foreignField: "artistId",
+        as: "albums"
+      }
+    },
+    {
+      $lookup: {
+        from: "songs",
+        localField: "albums._id",
+        foreignField: "albumId",
+        as: "songs"
+      }
+    },
+  ]).toArray())[0];
 }
 
 async function findRandom(limit = 5) {
