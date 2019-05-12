@@ -41,9 +41,6 @@ async function findAll() {
 }
 
 async function findById(_id) {
-  // return await DB.collection(COLL_NAME).findOne({
-  //   _id: ObjectId(_id)
-  // });
   return (await DB.collection(COLL_NAME).aggregate([
     {
       $match: {
