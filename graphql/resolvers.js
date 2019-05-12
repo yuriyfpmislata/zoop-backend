@@ -25,6 +25,9 @@ const resolvers = {
     },
     async artist(_, args) {
       return await Artists.findById(args.id);
+    },
+    async album(_, args) {
+      return await Albums.findById(args.id);
     }
   },
   Album: {
