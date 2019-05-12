@@ -24,14 +24,6 @@ app.get('/', (req, res) => {
   });
 });
 
-app.get('/songs', async (req, res) => {
-  const songs = await DB.collection('songs').find({}).toArray();
-
-  res.json({
-    songs
-  });
-});
-
 app.use(
   '/graphql',
   bodyParser.json(),
