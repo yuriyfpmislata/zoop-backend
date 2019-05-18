@@ -5,7 +5,9 @@ const { ObjectId } = require('mongodb');
 const COLL_NAME = 'artists';
 
 async function findAll() {
-  const mainResult = await DB.collection(COLL_NAME).aggregate([
+  const artists = (await DB.connect()).collection(COLL_NAME);
+
+  const mainResult = await artists.aggregate([
     {
       $lookup: {
         from: "albums",
@@ -41,7 +43,9 @@ async function findAll() {
 }
 
 async function findById(_id) {
-  return (await DB.collection(COLL_NAME).aggregate([
+  const artists = (await DB.connect()).collection(COLL_NAME);
+
+  return (await artists.aggregate([
     {
       $match: {
         _id: ObjectId(_id)
@@ -67,8 +71,10 @@ async function findById(_id) {
 }
 
 async function findRandom(limit = 5) {
+  const artists = (await DB.connect()).collection(COLL_NAME);
+
   // https://stackoverflow.com/questions/2824157/random-record-from-mongodb
-  return await DB.collection(COLL_NAME).aggregate([
+  return await artists.aggregate([
     {
       $sample: { size: limit }
     }

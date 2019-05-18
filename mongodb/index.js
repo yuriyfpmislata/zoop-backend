@@ -11,32 +11,23 @@ const {
 
 const MONGODB_URI = `mongodb+srv://${MONGODB_USER}:${MONGODB_PASSWORD}@${MONGODB_HOSTNAME}/${MONGODB_DATABASE}?retryWrites=true`;
 
-let DB;
-
 async function connect() {
+  console.log(`[mongodb] connecting...`);
+
   try {
     const connection = await mongodb.connect(MONGODB_URI, {
       useNewUrlParser: true
     });
 
-    DB = connection.db(MONGODB_DATABASE);
-
     console.log(`[mongodb] connected to ${MONGODB_DATABASE}`);
+
+    return connection.db(MONGODB_DATABASE);
   } catch (err) {
-    console.trace(`[mongodb] error while connecting`, err);
+    console.log(`[mongodb] error while connecting`);
+    console.log(JSON.stringify(err));
   }
 }
 
-function collection(colectionName) {
-  return DB.collection(colectionName);
-}
-
-function getDB() {
-  return DB;
-}
-
 module.exports.DB = {
-  connect,
-  collection,
-  getDB
+  connect
 };

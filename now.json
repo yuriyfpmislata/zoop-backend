@@ -1,0 +1,39 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@now/node-server"
+    }
+  ],
+  "routes": [
+    {
+      "src": ".*",
+      "status": 200,
+      "methods": [
+        "OPTIONS"
+      ],
+      "headers": {
+        "Access-Control-Allow-Headers": "Content-Type",
+        "Access-Control-Allow-Methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+        "Access-Control-Allow-Origin": "*"
+      }
+    },
+    {
+      "src": "/",
+      "dest": "server.js"
+    },
+    {
+      "src": "/graphql",
+      "dest": "server.js"
+    }
+  ],
+  "env": {
+    "APP_PORT": "4000",
+    "APP_HOSTNAME": "0.0.0.0",
+    "MONGODB_DATABASE": "zoop",
+    "MONGODB_USER": "@secret-mongodb-user",
+    "MONGODB_PASSWORD": "@secret-mongodb-password",
+    "MONGODB_HOSTNAME": "@secret-mongodb-hostname"
+  }
+}

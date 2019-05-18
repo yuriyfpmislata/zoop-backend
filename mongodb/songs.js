@@ -4,7 +4,9 @@ const { ObjectId } = require('mongodb');
 const COLL_NAME = 'songs';
 
 async function findAll() {
-  return await DB.collection(COLL_NAME).aggregate([
+  const songs = (await DB.connect()).collection(COLL_NAME);
+
+  return await songs.aggregate([
     {
       $lookup: {
         from: "albums",
@@ -31,7 +33,9 @@ async function findAll() {
 }
 
 async function findById(_id) {
-  return (await DB.collection(COLL_NAME).aggregate([
+  const songs = (await DB.connect()).collection(COLL_NAME);
+
+  return (await songs.aggregate([
     {
       $match: {
         _id: ObjectId(_id)
@@ -63,7 +67,9 @@ async function findById(_id) {
 }
 
 async function findTopPlayed(limit = 0) {
-  return await DB.collection(COLL_NAME).aggregate([
+  const songs = (await DB.connect()).collection(COLL_NAME);
+
+  return await songs.aggregate([
     {
       $lookup: {
         from: "albums",
@@ -93,7 +99,9 @@ async function findTopPlayed(limit = 0) {
 }
 
 async function findByAlbumId(albumId) {
-  return await DB.collection(COLL_NAME).find({
+  const songs = (await DB.connect()).collection(COLL_NAME);
+
+  return await songs.find({
     albumId: ObjectId(albumId)
   }).toArray();
 }

@@ -14,6 +14,8 @@ const DB = require('./mongodb').DB;
 const schema = require('./graphql/schema').schema;
 const resolvers = require('./graphql/resolvers').resolvers;
 
+console.log(`[server] initializing`);
+
 const app = express();
 
 app.use(cors());
@@ -34,8 +36,4 @@ app.use(
   })
 );
 
-app.listen(APP_PORT, APP_HOSTNAME, async () => {
-  await DB.connect();
-
-  console.log(`[expess] listening @ ${APP_HOSTNAME}:${APP_PORT}`);
-});
+app.listen();

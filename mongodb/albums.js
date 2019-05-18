@@ -4,7 +4,9 @@ const { ObjectId } = require('mongodb');
 const COLL_NAME = 'albums';
 
 async function findById(_id) {
-  return (await DB.collection(COLL_NAME).aggregate([
+  const albums = (await DB.connect()).collection(COLL_NAME);
+
+  return (await albums.aggregate([
     {
       $match: {
         _id: ObjectId(_id)
@@ -33,7 +35,9 @@ async function findById(_id) {
 }
 
 async function findAll() {
-  return await DB.collection(COLL_NAME).aggregate([
+  const albums = (await DB.connect()).collection(COLL_NAME);
+
+  return await albums.aggregate([
     {
       $lookup: {
         from: "songs",
