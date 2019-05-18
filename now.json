@@ -35,5 +35,8 @@
     "MONGODB_USER": "@secret-mongodb-user",
     "MONGODB_PASSWORD": "@secret-mongodb-password",
     "MONGODB_HOSTNAME": "@secret-mongodb-hostname"
-  }
+  },
+  "regions": [
+    "cdg1"
+  ]
 }
