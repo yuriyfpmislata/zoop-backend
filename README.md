@@ -13,4 +13,4 @@
 
 ### `npm start`
 
-Runs the server
+Runs the server. In case it fails (runs and exits), you may need to run `now dev --port 4000` manually (you may also need to `npm i -g now`).
